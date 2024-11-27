@@ -65,7 +65,7 @@ def main():
         # open_interface()
 
         root = tk.Tk()
-        root.title("Skillset Management System")
+        root.title("Main Menu")
         root.geometry("300x300")
 
         button_frame = tk.Frame(root)

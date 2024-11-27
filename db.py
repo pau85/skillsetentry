@@ -1,22 +1,16 @@
 import psycopg2
 from psycopg2 import sql
 from tkinter import messagebox
-
-# Database connection parameters
-DB_HOST = "localhost"
-DB_PORT = "5432"
-DB_NAME = "skillsetdb"
-DB_USER = "postgres"
-DB_PASSWORD = "M@rgi31985"
+import config
 
 def connect_to_db():
     try:
         conn = psycopg2.connect(
-            host=DB_HOST,
-            port=DB_PORT,
-            dbname=DB_NAME,
-            user=DB_USER,
-            password=DB_PASSWORD
+            host=config.DB_HOST,
+            port=config.DB_PORT,
+            dbname=config.DB_NAME,
+            user=config.DB_USER,
+            password=config.DB_PASSWORD
         )
         print("Connected to the database successfully!")
         return conn
